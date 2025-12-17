@@ -1,0 +1,132 @@
+.feed-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- STORIES --- */
+/* Контейнер сторис: 630px, скролл по горизонтали */
+.stories-container-wrapper {
+    width: 630px; /* ТВОЕ ТРЕБОВАНИЕ */
+    max-width: 100%;
+    overflow-x: auto; /* Скролл колесиком/пальцем */
+    overflow-y: hidden;
+    scrollbar-width: none; /* Прячем палку скролла */
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+}
+.stories-container-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* --- POSTS --- */
+/* Контейнер постов: 438px */
+.posts-stream {
+    width: 438px; /* ТВОЕ ТРЕБОВАНИЕ */
+    max-width: 100%;
+}
+
+.post {
+    margin-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 16px;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-avatar-img {
+    width: 32px; /* Чуть меньше в постах, как в оригинале */
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Жирный шрифт никнеймов */
+.username {
+    font-weight: 700; /* ТВОЕ ТРЕБОВАНИЕ */
+    font-size: 14px;
+    color: var(--text-white);
+    gap: 6px;
+}
+
+.time {
+    color: var(--text-gray);
+    font-size: 14px;
+}
+
+.post-image-container {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    width: 100%;
+}
+
+.post-image {
+    width: 100%;
+    display: block;
+}
+
+/* --- ACTIONS --- */
+.post-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 8px 0;
+}
+
+.left-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Эффект увеличения иконки */
+.icon-btn {
+    cursor: pointer;
+    color: var(--text-white);
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Пружинистый эффект */
+}
+
+.icon-btn:hover {
+    transform: scale(1.15); /* ТВОЕ ТРЕБОВАНИЕ */
+    opacity: 0.8;
+}
+
+/* Лайки рядом с сердцем */
+.like-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.like-count {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.post-details {
+    font-size: 14px;
+}
+
+.caption {
+    margin-top: 8px;
+    line-height: 1.4;
+}
+
+.view-comments {
+    color: var(--text-gray);
+    margin-top: 6px;
+    cursor: pointer;
+}

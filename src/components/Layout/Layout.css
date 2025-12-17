@@ -1,0 +1,55 @@
+.layout-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.layout-sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--bg-black);
+    height: 100%;
+    z-index: 10;
+}
+
+/* Область, которая скроллится */
+.layout-content {
+    flex-grow: 1;
+    overflow-y: auto; /* Скролл здесь */
+    display: flex;
+    justify-content: center; /* Центрируем всё содержимое */
+}
+
+/* Контейнер, который держит Ленту и Сайдбар рядом */
+.content-container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px; /* Ограничиваем общую ширину */
+    padding-top: 30px;
+    gap: 64px; /* Отступ между лентой и rightbar */
+}
+
+.feed-section {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Чтобы посты были по центру этой секции */
+    max-width: 630px; /* Ширина под сторис */
+}
+
+.rightbar-section {
+    width: var(--rightbar-width);
+    /* Rightbar просто лежит здесь и уезжает вверх при скролле */
+    display: block;
+}
+
+@media (max-width: 1100px) {
+    .rightbar-section { display: none; }
+    .content-container { justify-content: center; gap: 0; }
+}
+
+@media (max-width: 768px) {
+    .layout-sidebar { width: 72px; }
+}

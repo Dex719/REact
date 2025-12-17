@@ -1,0 +1,86 @@
+.my-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic-wrapper img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-login { font-weight: 600; font-size: 14px; }
+.profile-name { color: var(--text-gray); font-size: 14px; }
+
+.switch-btn, .see-all {
+    color: var(--accent-blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+.see-all { color: var(--text-white); }
+.see-all:hover { color: var(--text-gray); }
+
+.suggestions-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-gray);
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+.suggestion-avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.suggestion-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 10px; /* Отступ от кнопки */
+}
+
+.s-login {
+    font-weight: 600;
+    font-size: 14px; /* ИЗМЕНЕНО НА 14px */
+    color: var(--text-white);
+    cursor: pointer;
+    gap: 6px;
+}
+.s-login:hover {
+    color: var(--text-gray);
+}
+
+.s-desc {
+    color: var(--text-gray);
+    font-size: 12px;
+}
+.follow-btn {
+    color: var(--accent-blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+.follow-btn:hover { color: #fff; }
+
+.right-footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #555; /* Очень тусклый серый */
+    line-height: 1.5;
+}

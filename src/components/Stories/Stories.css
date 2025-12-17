@@ -1,0 +1,95 @@
+/* Обертка для позиционирования кнопок */
+.stories-wrapper {
+    position: relative;
+    width: 100%; /* Занимает всю ширину родителя */
+    display: flex;
+    align-items: center;
+}
+
+.stories-bar {
+    display: flex;
+    gap: 16px;
+    padding: 8px 0 24px 0;
+    margin-bottom: 20px;
+    overflow-x: auto;
+    width: 100%;
+    scrollbar-width: none; /* Скрыть скроллбар Firefox */
+
+    /* Магия для "целых" сторисов (чтобы не торчало пол сториса при остановке) */
+    scroll-snap-type: x mandatory;
+}
+
+.stories-bar::-webkit-scrollbar {
+    display: none; /* Скрыть скроллбар Chrome/Safari */
+}
+
+.story-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+
+    /* Привязка элемента к началу скролла */
+    scroll-snap-align: start;
+}
+
+/* СТИЛИ ДЛЯ КОЛЕЦ И АВАТАРОК ОСТАВЛЯЕМ КАК БЫЛО */
+.story-ring {
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    padding: 3px;
+    background: var(--story-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.story-avatar {
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-black);
+    object-fit: cover;
+    display: block;
+}
+
+.story-name {
+    font-size: 12px;
+    margin-top: 4px;
+    color: var(--text-white);
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- КНОПКИ НАВИГАЦИИ --- */
+.story-nav-btn {
+    position: absolute;
+    top: 36%; /* Центрируем относительно кружков */
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.story-nav-btn:hover {
+    background-color: #fff;
+}
+
+.story-nav-btn.left {
+    left: 10px;
+}
+
+.story-nav-btn.right {
+    right: 10px;
+}

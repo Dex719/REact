@@ -1,0 +1,149 @@
+.sidebar {
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-right: 1px solid var(--border-color);
+    background-color: var(--bg-black);
+    position: sticky;
+    top: 0;
+}
+
+.sidebar__logo {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 29px;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    padding-top: 25px;
+    cursor: pointer;
+}
+
+.sidebar__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--text-white);
+    transition: background-color 0.2s;
+    position: relative;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin-right: 16px;
+    position: relative;
+}
+
+/* --- СТИЛИ ДЛЯ ИКОНОК-КАРТИНОК --- */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    /* Плавное увеличение при нажатии */
+    transition: transform 0.1s;
+}
+
+/* Эффект нажатия (Active) */
+.menu-item.active .nav-icon {
+    transform: scale(1.05);
+}
+
+/* Тексты */
+.menu-item .label {
+    font-size: 16px;
+    font-weight: 400;
+}
+.bold-text { font-weight: 700 !important; }
+
+/* Аватарка */
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+.active-border {
+    border: 2px solid var(--text-white);
+    padding: 1px;
+    box-sizing: content-box;
+    /* content-box важен, чтобы border добавлялся снаружи, а не сжимал картинку */
+}
+
+.messages-badge {
+    position: absolute;
+    /* Позиция как на иконке мессенджера */
+    top: -5px;
+    right: -7px;
+
+    background-color: #ff3040;
+    color: white;
+    font-size: 11px;
+    font-weight: 700; /* Жирный шрифт */
+
+    /* Делаем идеальный круг */
+    height: 22px;
+    min-width: 22px;
+    padding-bottom: 2px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Круг */
+
+    /* Эффект выреза - рамка цвета фона */
+    border: 2px solid var(--bg-black);
+    z-index: 10;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 9px;
+    height: 9px;
+    background-color: #ff3040;
+    border-radius: 50%;
+    border: 2px solid var(--bg-black);
+}
+
+.sidebar__footer {
+    margin-top: auto;
+    padding-bottom: 20px;
+}
+
+.nav-icon {
+    filter: invert(96%);
+}
+
+/* Sidebar.css */
+
+.sidebar__logo-container {
+    padding: 24px 12px 0 12px; /* Чуть подправил отступы */
+    margin-bottom: 20px;
+}
+
+.sidebar-logo-svg {
+    width: 110px; /* Размер логотипа */
+    height: auto;
+    display: block;
+
+    /* САМОЕ ВАЖНОЕ - ДЕЛАЕМ БЕЛЫМ */
+    fill: #F5F5F5;
+    color: #F5F5F5; /* На всякий случай дублируем */
+}
